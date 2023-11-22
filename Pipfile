@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 requests = "*"
 bs4 = "*"
+drf-spectacular = "*"
 
 [dev-packages]
 

@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'football_api',  # My App
     'rest_framework',  # Third party package
+    'drf_spectacular',  # Third party package
+    'rest_framework.authtoken',  # Third party package
 
 ]
 
@@ -55,6 +57,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Django Rest Framework Football Api  '
+}
 
 ROOT_URLCONF = 'football.urls'
 
@@ -81,7 +91,7 @@ WSGI_APPLICATION = 'football.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
