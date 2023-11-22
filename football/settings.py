@@ -91,11 +91,12 @@ WSGI_APPLICATION = 'football.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'neondb',
-        'PASSWORD': 'tTxICX8uV7Fl',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # PostgreSQL Database
+        'NAME': 'verceldb',
         'USER': 'default',
-        'HOST': 'ep-misty-wildflower-42917367.us-east-2.aws.neon.tech'
+        'PASSWORD': 'lrgGWk8x3wms',
+        'HOST': 'ep-sweet-pond-10016872-pooler.us-east-1.postgres.vercel-storage.com',
+        'PORT': 5432,
     }
 }
 
