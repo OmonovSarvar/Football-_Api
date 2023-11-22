@@ -2,29 +2,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import ListAPIView
 from django.core.mail import send_mail
-import requests
-from bs4 import BeautifulSoup
+
 
 # Third party packages
 from .serializers import SendEmailSerializer, CreateMatchSerializer
 from .models import CreateNewMatch, SendMessageToEmail
 from football.settings import EMAIL_HOST_USER
-
-
-def schedule():
-    url = "https://www.goal.com/en/live-scores"
-
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, "html.parser")
-    # print(soup)
-    matches = soup.find_all("div", id="__next")
-    print(matches)
-    for match in matches:
-        home_team = match.find("div", class_="team-home")
-        away_team = match.find("div", class_="team-away")
-        score = match.find("div", class_="match-info")
-
-        print(f"{home_team} vs {away_team}: {score}")
 
 
 class GameScheduleView(ListAPIView):

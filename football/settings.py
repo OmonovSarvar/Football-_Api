@@ -28,7 +28,7 @@ EMAIL_HOST_PASSWORD = 'pnxy frcg yjfr jyfo'
 SECRET_KEY = 'django-insecure-7&rv5x#0hcp&0!5pxj!y_=lghs2dtw07r$+qt%@7x3a@_rw3ol'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'football.wsgi.application'
+WSGI_APPLICATION = 'football.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
